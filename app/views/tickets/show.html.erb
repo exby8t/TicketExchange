@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @ticket.game %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @ticket.section %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @ticket.note %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @ticket.quantity %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= "#{@ticket.user.first_name}  #{@ticket.user.last_name}" %>
+</p>
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>

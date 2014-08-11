@@ -1,0 +1,36 @@
+<h2>
+  <%= @user.first_name %>
+  <%= @user.last_name %>
+</h2>
+
+<p>
+  <strong>Netid:</strong>
+  <%= @user.netid %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @user.about %>
+</p>
+
+<p>
+  <strong>Administrator:</strong>
+  <%= @user.administrator %>
+</p>
+
+  <h3>Tickets</h3>
+  <ul>
+    <% @user.tickets.each do | ticket | %>
+      <li><%= ticket.game %> <br/>
+        Quantity: <%= ticket.quantity %>
+      </li>
+    <% end %>
+  </ul>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
